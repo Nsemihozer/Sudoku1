@@ -14,6 +14,7 @@ public class SudokuGrid : MonoBehaviour
     private List<GameObject> grid_squares = new List<GameObject>();
     private int selected_grid = -1;
     public Color linehighcol = Color.red;
+    private menuControllers menuControllers;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +50,8 @@ public class SudokuGrid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+            menuControllers.loadScreen("Menu");
     }
     private void gridCreate()
     {

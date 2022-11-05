@@ -8,6 +8,9 @@ public class menuControllers : MonoBehaviour
 {
     // Start is called before the first frame update
     public Text clock;
+
+    [SerializeField]
+    private GameObject PrivacyPanel;
     void Start()
     {
         
@@ -78,7 +81,7 @@ public class menuControllers : MonoBehaviour
     }
     public void PrivacyOpen()
     {
-        Application.OpenURL("https://cotyoragames.com/projects/classicsudoku-privacy_policy.php");
+        PrivacyPanel.SetActive(true);
     }
     public void SiteOpen()
     {
